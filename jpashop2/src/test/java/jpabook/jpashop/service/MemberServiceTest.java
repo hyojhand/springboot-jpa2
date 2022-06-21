@@ -37,7 +37,7 @@ public class MemberServiceTest {
 
         // then
 //        em.flush(); // DB로 쿼리를 수행하기위해 롤백하기전 flush 시켜주면 insert쿼리 확인가능
-        assertEquals(member,memberRepository.findOne(savedId));
+        assertEquals(member,memberRepository.findById(savedId));
     }
 
     @Test(expected = IllegalStateException.class) // IllegalStateException이 나와야한다
